@@ -3,4 +3,5 @@
     <string name="resetButtonText">Reset</string>
     <string name="incButtonText">+1</string>
     <string name="decButtonText">-1</string>
+    <string name="counterText">0</string>
 </resources>
