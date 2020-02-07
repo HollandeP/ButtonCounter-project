@@ -4,4 +4,5 @@
     <string name="incButtonText">+1</string>
     <string name="decButtonText">-1</string>
     <string name="counterText">0</string>
+    <string name="wow">Don\'t Tap Me</string>
 </resources>
