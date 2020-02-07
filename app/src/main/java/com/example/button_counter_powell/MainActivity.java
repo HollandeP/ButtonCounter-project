@@ -3,6 +3,7 @@ package com.example.button_counter_powell;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     TextView counterText;
     ImageView theBoy;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         counterText = findViewById(R.id.counterText);
         theBoy = findViewById(R.id.theBoy);
         theBoy.setVisibility(View.INVISIBLE);
+        final MediaPlayer goodSong = MediaPlayer.create(this, R.raw.classic);
 
         resetBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
                     incBtn.setVisibility(View.INVISIBLE);
                     decBtn.setVisibility(View.INVISIBLE);
                     counterText.setVisibility(View.INVISIBLE);
+                    goodSong.start();
                     wowFactor ++;
                 }
                 else {
@@ -80,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
                     decBtn.setVisibility(View.VISIBLE);
                     counterText.setVisibility(View.VISIBLE);
                     wowBtn.setText("That was fun");
+                    goodSong.stop();
                 }
             }
         });
