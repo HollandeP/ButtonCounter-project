@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                     decBtn.setVisibility(View.VISIBLE);
                     counterText.setVisibility(View.VISIBLE);
                     wowBtn.setText("That was fun");
-                    goodSong.stop();
+                    goodSong.pause();
                 }
             }
         });
@@ -101,5 +101,6 @@ public class MainActivity extends AppCompatActivity {
         super.onRestoreInstanceState(savedInstanceState);
         counterVal = savedInstanceState.getInt("counterVal");
         counterText.setText(String.valueOf(counterVal));
+
     }
 }
